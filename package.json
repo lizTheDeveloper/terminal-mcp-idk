@@ -1,0 +1,21 @@
+{
+  "name": "terminal-mcp",
+  "version": "1.0.0",
+  "description": "MCP Server for terminal access",
+  "type": "module",
+  "bin": {
+    "terminal-mcp": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "start": "node build/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "latest",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  }
+}
